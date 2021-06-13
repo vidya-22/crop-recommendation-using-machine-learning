@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.images{
+position: absolute;
+}
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation using Machine Learning</h1>
+	
+	
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+<div class="images">
+<br>
+<br>
+
+<h1 align="center"> Planting and Care<br>Cotton </h1>	<p>You will need to keep the plants watered throughout the summer months as part of optimal cotton plant care. At around four to five weeks, the plants will begin branching. By eight weeks you should start to notice the first squares, after which blooming soon follows. Once the creamy, white flowers have been pollinated, they will turn pink. At this point the plants will begin producing a boll (which becomes the ‘cotton ball.’). It is crucial that water be given during this entire process to ensure adequate growth and production. Cotton is ready for harvesting once all of the bolls have cracked open and looks like a fluffy ball. This normally occurs within four months of planting. The growing cotton plants will naturally dry up and shed their leaves just prior to the bolls cracking. Be sure to wear some gloves when harvesting cotton from your plants to protect your little one’s hands from getting cut.
+
+</p><br><p align="center">
+---------------------------------------------<br>
+Statistics for Nitrogen<br>
+Minimum Nitrigen required : 100<br>
+Average Nitrogen required : 117.77<br>
+Maximum Nitrogen required : 140<br>
+---------------------------------------------<br>
+Statistics for Phosphorous<br>
+Minimum Phosphorous required : 35<br>
+Average Phosphorous required : 46.24<br>
+Maximum Phosphorous required : 60<br>
+---------------------------------------------<br>
+Statistics for Potassium<br>
+Minimum Potassium required : 15<br>
+Average Potassium required : 19.56<br>
+Maximum Potassium required : 25<br>
+---------------------------------------------<br>
+Statistics for Temperature<br>
+Minimum Temperature required : 22.00<br>
+Average Temperature required : 23.99<br>
+Maximum Temperature required : 25.99<br>
+---------------------------------------------<br>
+Statistics for Humidity<br>
+Minimum Humidity required : 75.01<br>
+Average Humidity required : 79.84<br>
+Maximum Humidity required : 84.88<br>
+---------------------------------------------<br>
+Statistics for PH<br>
+Minimum PH required : 5.80<br>
+Average PH required : 6.91<br>
+Maximum PH required : 7.99<br>
+---------------------------------------------<br>
+Statistics for Rainfall<br>
+Minimum Rainfall required : 60.65<br>
+Average Rainfall required : 80.40<br>
+Maximum Rainfall required : 99.93</p>
+
+<div style="padding-left:16px">
+
+</div>
+	
+	
+
+
+</body>
+</html>

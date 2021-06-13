@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation using Machine Learning</h1>
+	
+	
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+<div class="images">
+<h1 align="center"> Planting and Care<br>Chickpea </h1>	<p>Water regularly. Regular rainfall is usually sufficient, but if the season is a dry one, water the chickpeas twice a week during the flowering and pod formation stages.
+	Mulch as needed. Once the weather warms up, you should add a light coat of mulch around the stems. Doing so can retain an adequate amount of soil moisture, which is especially important if your plants are receiving full sun.
+Fertilize with caution. You can add a little aged compost or similar organic material to the soil around the chickpeas mid-season. As before, though, you should avoid adding nitrogen-rich fertilizers.
+Handle the chickpeas carefully. When removing weeds or adding anything to the soil, you need to work carefully to avoid disturbing the plant's root system. The root system of a chickpea plant is quite shallow, so working too close to the base of the plant can cause damage to its roots.
+Manage pests as you see them. Chickpeas are vulnerable to attacks by a range of different pests. You should avoid pre-treating the plant for pests, though, and instead wait until you spot pests before taking action against them.
+Keep an eye out for signs of disease. These plants are also vulnerable to a few different diseases, including blight, mosaic, and anthracnose. Plant disease-resistant varieties when possible.
+</p>
+<br><p align="center">
+---------------------------------------------<br>
+Statistics for Nitrogen<br>
+Minimum Nitrigen required : 20<br>
+Average Nitrogen required : 40.09<br>
+Maximum Nitrogen required : 60<br>
+---------------------------------------------<br>
+Statistics for Phosphorous<br>
+Minimum Phosphorous required : 55<br>
+Average Phosphorous required : 67.79<br>
+Maximum Phosphorous required : 80<br>
+---------------------------------------------<br>
+Statistics for Potassium<br>
+Minimum Potassium required : 75<br>
+Average Potassium required : 79.92<br>
+Maximum Potassium required : 85<br>
+---------------------------------------------<br>
+Statistics for Temperature<br>
+Minimum Temperature required : 17.02<br>
+Average Temperature required : 18.87<br>
+Maximum Temperature required : 21.00<br>
+---------------------------------------------<br>
+Statistics for Humidity<br>
+Minimum Humidity required : 14.26<br>
+Average Humidity required : 16.86<br>
+Maximum Humidity required : 19.97<br>
+---------------------------------------------<br>
+Statistics for PH<br>
+Minimum PH required : 5.99<br>
+Average PH required : 7.34<br>
+Maximum PH required : 8.87<br>
+---------------------------------------------<br>
+Statistics for Rainfall<br>
+Minimum Rainfall required : 65.11<br>
+Average Rainfall required : 80.06<br>
+Maximum Rainfall required : 94.78</p>
+
+<div style="padding-left:16px">
+
+</div>
+	
+	
+
+
+</body>
+</html>

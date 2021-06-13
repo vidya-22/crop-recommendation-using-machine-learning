@@ -1,0 +1,4 @@
+
+input[type=text]:focus {
+  background-color: #f7f2f7;
+}

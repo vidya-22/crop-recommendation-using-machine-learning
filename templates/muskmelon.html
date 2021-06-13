@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.images{
+position: absolute;
+}
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation using Machine Learning</h1>
+	
+	
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+<div class="images">
+<h1 align="center"> Planting and Care<br>Muskmelon</h1>	<p>Cultivate carefully around vines until they cover the ground and smother out competing weeds.
+Mulch around melon plants with straw or dry, chopped leaves to retain soil moisture, slow weed growth, and keep fruits off of the soil.
+Support melons on a low tripod or A-frame trellis to keep them off the wet ground; use netting or a bag to support trellis- or fence-grown melons.
+Pinch back flowers to permit just 4 fruits to form on each vine. Fewer melons on a plant will be larger, sweeter, and come to harvest quicker.
+You can also pinch away some flowers so that a newly pollinated flower begins growing a new fruit every two weeks. This can stagger the harvest of fruit from one plant.
+For melons sprawling across the ground, place a shingle, tile, half milk jug, or clay pot under each melon to keep it dry and prevent rot. These items will also soak up solar heat and keep the fruit warm at night.
+Avoid pruning leaves off of plants until just before harvest. Leaves help produce the sugars melons need for sweetness. Pull back leaves that cover fruits to give fruits maximum sun exposure.
+Remove all new blossoms that appear within 50 days of the first frost in autumn. This will allow the plant to ripen fruit already on the vine before the first frost.
+</p>
+<br><p align="center">---------------------------------------------<br>
+Statistics for Nitrogen<br>
+Minimum Nitrigen required : 80<br>
+Average Nitrogen required : 100.32<br>
+Maximum Nitrogen required : 120<br>
+---------------------------------------------<br>
+Statistics for Phosphorous<br>
+Minimum Phosphorous required : 5<br>
+Average Phosphorous required : 17.72<br>
+Maximum Phosphorous required : 30<br>
+---------------------------------------------<br>
+Statistics for Potassium<br>
+Minimum Potassium required : 45<br>
+Average Potassium required : 50.08<br>
+Maximum Potassium required : 55<br>
+---------------------------------------------<br>
+Statistics for Temperature<br>
+Minimum Temperature required : 27.02<br>
+Average Temperature required : 28.66<br>
+Maximum Temperature required : 29.94<br>
+---------------------------------------------<br>
+Statistics for Humidity<br>
+Minimum Humidity required : 90.02<br>
+Average Humidity required : 92.34<br>
+Maximum Humidity required : 94.96<br>
+---------------------------------------------<br>
+Statistics for PH<br>
+Minimum PH required : 6.00<br>
+Average PH required : 6.36<br>
+Maximum PH required : 6.78<br>
+---------------------------------------------<br>
+Statistics for Rainfall<br>
+Minimum Rainfall required : 20.21<br>
+Average Rainfall required : 24.69<br>
+Maximum Rainfall required : 29.87</p>
+
+</div>
+	
+	
+
+
+</body>
+</html>

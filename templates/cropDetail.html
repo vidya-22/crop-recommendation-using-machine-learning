@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+
+body{
+
+background-color:#fff1f3;
+background-repeat:repeat-y;
+background-size:100%;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+
+
+
+}
+.images{
+position: absolute;
+}
+figcaption{position: absolute;}
+
+figure {
+    display: inline-block;
+    border: 1px dotted gray;
+    margin: 20px; /* adjust as needed */
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Details</h1>
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+
+<div style="padding-left:16px">
+
+</div>
+	<div class="images">
+	<br><br>
+	<figure>
+<a href="{{ url_for('rice')}} ">
+	<img  src= {{image_url1}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	
+	<figcaption >{{ image1 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('maize')}} ">
+	<img src= {{image_url2}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image2 }}</figcaption>
+	</figure>
+	<figure>
+<a href="{{ url_for('chickpea')}} ">
+	<img src= {{image_url3}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image3 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('kidneybeans')}} ">
+	<img src= {{image_url4}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image4 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('pegionpea')}} ">
+	<img src= {{image_url5}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image5 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('mothbeans')}} ">
+	<img src= {{image_url6}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image6 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('blackgram')}} ">
+	<img src= {{image_url7}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image7 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('lentil')}} ">
+	<img src= {{image_url8}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>
+
+<figcaption >{{ image8 }}</figcaption>
+	</figure>
+	<figure>	<a href="{{ url_for('pomogranate')}} ">
+	<img src= {{image_url9}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image9 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('banana')}} ">
+	<img src= {{image_url10}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>	
+<figcaption >{{ image10 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('mango')}} ">
+	<img src= {{image_url11}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image11 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('grapes')}} ">
+	<img src= {{image_url12}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>	
+
+<figcaption >{{ image12 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('watermelon')}} ">
+	<img src= {{image_url13}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>	
+<figcaption >{{ image13 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('muskmelon')}} ">
+	<img src= {{image_url14}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image14 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('apple')}} ">
+	<img src= {{image_url15}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image15 }}</figcaption>
+	</figure>
+	<figure>
+<a href="{{ url_for('orange')}} ">
+	<img src= {{image_url16}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image16 }}</figcaption>
+	</figure>
+	<figure>
+<a href="{{ url_for('papaya')}} ">
+	
+	<img src= {{image_url17}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	
+</a>
+<figcaption >{{ image17 }}</figcaption>
+	</figure>
+	<figure>
+<a href="{{ url_for('coconut')}} ">
+	<img src= {{image_url18}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>
+<figcaption >{{ image18 }}</figcaption>
+	</figure>
+	<figure>
+		<a href="{{ url_for('cotton')}} ">
+	<img src= {{image_url19}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>
+<figcaption >{{ image19 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('jute')}} ">
+
+	<img src= {{image_url20}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+</a>
+<figcaption >{{ image20 }}</figcaption>
+	</figure>
+	<figure>
+		<a href="{{ url_for('coffee')}} ">
+
+	<img src= {{image_url21}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	</a>
+	<figcaption >{{ image21 }}</figcaption>
+	</figure>
+	<figure>
+	<a href="{{ url_for('mungbeans')}} ">
+	<img align="center" src= {{image_url22}} width="250px", height="200px" style="border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+	
+	</a>
+	<figcaption >{{ image22 }}</figcaption>
+	</figure>
+	
+	
+	</div>
+
+
+</body>
+</html>

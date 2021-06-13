@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+.images{
+position: absolute;
+}
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation using Machine Learning</h1>
+	
+	
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+<div class="images">
+<h1 align="center"> Planting and Care<br>Maize </h1>	<p>Corn can’t compete with weeds, so be sure to kill weeds thoroughly around the stalks for the first month of growth. After that, corn’s shallow roots will spread out as much as 1 foot from the stalk; be careful not to disturb these roots, because it’s easy to damage them. Instead, apply mulch to prevent weeds from sprouting.
+
+Corn needs about 1 inch of water a week, particularly when the stalks begin to tassel. Water stress during pollination will result in ears with lots of missing kernels, so don’t skip watering your corn patch. Apply water at the soil surface by using a soaker hose or drip irrigation. Avoid spraying plants from above, which could wash pollen off the flowering tops.
+</p>
+<br><p align="center">
+---------------------------------------------<br>
+Statistics for Nitrogen<br>
+Minimum Nitrigen required : 60<br>
+Average Nitrogen required : 77.76<br>
+Maximum Nitrogen required : 100<br>
+---------------------------------------------<br>
+Statistics for Phosphorous<br>
+Minimum Phosphorous required : 35<br>
+Average Phosphorous required : 48.44<br>
+Maximum Phosphorous required : 60<br>
+---------------------------------------------<br>
+Statistics for Potassium<br>
+Minimum Potassium required : 15<br>
+Average Potassium required : 19.79<br>
+Maximum Potassium required : 25<br>
+---------------------------------------------<br>
+Statistics for Temperature<br>
+Minimum Temperature required : 18.04<br>
+Average Temperature required : 22.39<br>
+Maximum Temperature required : 26.55<br>
+---------------------------------------------<br>
+Statistics for Humidity<br>
+Minimum Humidity required : 55.28<br>
+Average Humidity required : 65.09<br>
+Maximum Humidity required : 74.83<br>
+---------------------------------------------<br>
+Statistics for PH<br>
+Minimum PH required : 5.51<br>
+Average PH required : 6.25<br>
+Maximum PH required : 7.00<br>
+---------------------------------------------<br>
+Statistics for Rainfall<br>
+Minimum Rainfall required : 60.65<br>
+Average Rainfall required : 84.77<br>
+Maximum Rainfall required : 109.75</p>
+
+</div>
+	
+	
+
+
+</body>
+</html>

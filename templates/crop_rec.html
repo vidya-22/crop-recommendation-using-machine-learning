@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ 
+ <script>
+ function validate()
+{
+var n=document.getElementById("1").value;
+var p=document.getElementById("2").value;
+var k=document.getElementById("3").value;
+var temp=document.getElementById("4").value;
+var humi=document.getElementById("5").value;
+var ph=document.getElementById("6").value;
+var rain=document.getElementById("7").value;
+var set=0;
+if(n<0 || n>140)
+{set=1;
+alert("Invalid input for N, enter in between 0 and 140");
+}
+if(p<5  || p>145)
+{set=1;
+alert("Invalid input for P , enter in between 5 and 145");
+}
+if(k<5 || k>205)
+{set=1;
+alert("Invalid input for K, enter in between 5 and 205");
+}
+if(temp<8  || temp>43)
+{set=1;
+alert("Invalid input for temperatue, enter in between 8 and 43");
+}
+if(humi<14  || humi>100)
+{set=1;
+alert("Invalid input for humidity, enter in between 14 and 100");
+}
+if(ph<3.5  || ph>10)
+{set=1;
+alert("Invalid input for PH, enter in between 3.5 and 10");
+}
+if(rain< 20 || rain>300)
+{set=1;
+alert("Invalid input for rainfall, enter in between 20 and 300");
+}
+if(set==0){
+confirm("Form validated successfully, click on Predict Crop")}
+
+}
+ </script>
+ <style>
+ input[type=text] {
+  width:130%;
+  padding: 12px 40px;
+  border-radius:25px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #555;
+  outline: none;
+  height:10px;
+}
+
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:6%;
+font-size:20px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.images{
+position: absolute;
+}
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+  </style>
+
+</head>
+<body>
+ 
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation</h1>
+<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+         <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+
+<div style="padding-left:16px">
+
+</div>
+	
+	<div class="split left">
+  <div class="centered">
+  <form action="{{ url_for('predict')}}" method="post" align="left" style="padding-right:0%">
+    	<input type="text" id="1" name="nitrogen" placeholder="enter ratio of nitrogen" required="required" /><br>
+        <input type="text" id="2" name="phosphorus" placeholder="enter ratio of phosphorus" required="required" /><br>
+		<input type="text" id="3" name="potassium" placeholder="enter ratio of potassium" required="required" /><br>
+		<input type="text" id="4" name="temperature" placeholder="enter temperature in degree celsius" required="required" /><br>
+        <input type="text" id="5" name="humidity" placeholder="enter relative humidity in %" required="required" /><br>
+		<input type="text" id="6" name="soil_ph" placeholder="enter ph value of the soil" required="required" /><br>
+		<input type="text" id="7" name="rainfall" placeholder="enter rainfall in mm" required="required" /><br>
+		<label for="algorithm">Choose algorithm:</label>
+
+<select name="algorithm" id="algorithm">
+  
+  <option value="1">Gradient Boosting Regressor</option>
+  <option value="2">Random Forest Regressor</option>
+  <option value="3">Logistic Regression</option>
+  <option value="4">Decision Tree Regressor</option>
+  
+</select>
+        <div class="btn-group">
+       
+        <button type="button" id="0" onclick="validate()" >Validate</button>
+        
+
+        <button type="submit" >Predict Crop</button>
+       </div>
+      
+    </form>
+    </div>
+    </div>
+<div class="split right">
+  <div class="centered">
+   <br>
+   
+<figure align="center" style="margin-left:auto; margin-right:auto">
+<div class="img-container">
+  <img src= {{image_url}} width="300px", height="200px" style="margin-left:auto; margin-right:auto;border: 20px solid #c7aab6; border-bottom:5px solid #c7aab6;">
+  <figcaption style="font-size:50px; margin-left:20px; font-style:italic; width:300px;" text-align="center" >{{ prediction_text }}</figcaption>
+</div>
+</figure>
+   
+  
+  </div>
+  </div>
+
+ 
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+    
+  
+   
+
+
+
+
+</body>
+</html>

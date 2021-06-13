@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation using Machine Learning</h1>
+	
+	
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+<div class="images">
+<h1 align="center"> Planting and Care<br>Banana </h1>	<p>Refer our Garden Guide for detailed procedures and meanings of words related to gardening.
+    Sunlight:
+
+Morning sunlight of more than 6 hours a day is ideal for flower and fruit development.
+Soil:
+The soil should be well drained, fertile and rich in organic content for growing Banana plant.
+Watering:
+Poke your finger/plain small stick into the soil to check the moisture.
+Apply 4 cup (approx.200ml) of water when the top soil (1-2 inch) in the pot feels dry to touch.
+Do not overwater the plant.
+As a rule of thumb, water the plants thoroughly in summer and reduce watering in winter and rainy season.
+Water should be applied preferably in the morning or evening.
+Application of Fertilizer:
+Before application of fertilizer loosen the topsoil without disturbing the roots of the plant so, it can uptake the nutrients and moisture easily.
+Apply organic fertilizer once a month.
+Apply water immediately after application of fertilizer.
+Plant Protection:
+Remove dead, infected or damaged plant parts and discard them away from the plants.
+For any insect attack or disease, you can use Neem oil, Eucalyptus oil or Citrus oil spray for primary treatment.
+	
+	</p>
+	<br><p align="center">
+---------------------------------------------<br>
+Statistics for Nitrogen<br>
+Minimum Nitrigen required : 80<br>
+Average Nitrogen required : 100.23<br>
+Maximum Nitrogen required : 120<br>
+---------------------------------------------<br>
+Statistics for Phosphorous<br>
+Minimum Phosphorous required : 70<br>
+Average Phosphorous required : 82.01<br>
+Maximum Phosphorous required : 95<br>
+---------------------------------------------<br>
+Statistics for Potassium<br>
+Minimum Potassium required : 45<br>
+Average Potassium required : 50.05<br>
+Maximum Potassium required : 55<br>
+---------------------------------------------<br>
+Statistics for Temperature<br>
+Minimum Temperature required : 25.01<br>
+Average Temperature required : 27.38<br>
+Maximum Temperature required : 29.91<br>
+---------------------------------------------<br>
+Statistics for Humidity<br>
+Minimum Humidity required : 75.03<br>
+Average Humidity required : 80.36<br>
+Maximum Humidity required : 84.98<br>
+---------------------------------------------<br>
+Statistics for PH<br>
+Minimum PH required : 5.51<br>
+Average PH required : 5.98<br>
+Maximum PH required : 6.49<br>
+---------------------------------------------<br>
+Statistics for Rainfall<br>
+Minimum Rainfall required : 90.11<br>
+Average Rainfall required : 104.63<br>
+Maximum Rainfall required : 119.85</p>
+
+</div>
+<div style="padding-left:16px">
+
+</div>
+	
+	
+
+
+</body>
+</html>

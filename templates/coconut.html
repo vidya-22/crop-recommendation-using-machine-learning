@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+ 
+ 
+
+ <style>
+
+body{
+
+background-color:#fff1f3;
+background-repeat:no-repeat;
+background-size:cover;
+<!--navbar code-->
+ margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #c8a2b5;
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ff7f50;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffe600;
+  color: black;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: coral;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:#FF6347 ;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.button_style
+{
+right:50%;
+width:95%;
+height:15%;
+font-size:24px;
+font-style:italic;
+padding:1.5%;
+border-radius:20%;
+background-color:#c7aab6;
+border:3px solid #555;
+color:black;
+cursor:pointer;
+}
+
+
+.split {
+  height:100%;
+  width: 50%;
+  position:fixed;
+  }
+  .left {
+  left: 0;
+  }
+  .right {
+  right: 0;
+  }
+  .centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.images{
+position: absolute;
+}
+
+
+.img-container{
+background-color:#c8a2b5;
+border:3px solid #555;
+border-radius:20%;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+	<h1 align="center" style="font-style:italic">Crop Recommendation using Machine Learning</h1>
+	
+	
+	<div class="topnav">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        
+        <div class="dropdown-content">
+          <a href="{{ url_for('crop_recommendation') }}">Crop Recommendation</a>
+          <a href="{{ url_for('crop_details') }}">Crop Details</a>
+          <a href="{{ url_for('contact') }}">Contact Us</a>
+        </div>
+      </div>
+        <div> 
+        <a href="{{ url_for('myhome') }}">Home</a>
+        </div>
+</div>
+<div class="images">
+<h1 align="center"> Planting and Care<br>Coconut</h1>	<p>First, water the coconut tree frequently.
+As long as the soil drains well, you really cant water it too often.
+If you decide to repot your coconut tree, remember to add sand or vermiculite to the new soil to keep the water draining well.
+Second, growing coconut palms are heavy feeders that require regular, complete fertilizer.
+Look for a fertilizer that provides both the basic nutrients plus trace nutrients like boron, manganese and magnesium.</p>
+<br><p align="center">
+---------------------------------------------<br>
+Statistics for Nitrogen<br>
+Minimum Nitrigen required : 0<br>
+Average Nitrogen required : 21.98<br>
+Maximum Nitrogen required : 40<br>
+---------------------------------------------<br>
+Statistics for Phosphorous<br>
+Minimum Phosphorous required : 5<br>
+Average Phosphorous required : 16.93<br>
+Maximum Phosphorous required : 30<br>
+---------------------------------------------<br>
+Statistics for Potassium<br>
+Minimum Potassium required : 25<br>
+Average Potassium required : 30.59<br>
+Maximum Potassium required : 35<br>
+---------------------------------------------<br>
+Statistics for Temperature<br>
+Minimum Temperature required : 25.01<br>
+Average Temperature required : 27.41<br>
+Maximum Temperature required : 29.87<br>
+---------------------------------------------<br>
+Statistics for Humidity<br>
+Minimum Humidity required : 90.02<br>
+Average Humidity required : 94.84<br>
+Maximum Humidity required : 99.98<br>
+---------------------------------------------<br>
+Statistics for PH<br>
+Minimum PH required : 5.50<br>
+Average PH required : 5.98<br>
+Maximum PH required : 6.47<br>
+---------------------------------------------<br>
+Statistics for Rainfall<br>
+Minimum Rainfall required : 131.09<br>
+Average Rainfall required : 175.69<br>
+Maximum Rainfall required : 225.63</p>
+</div>
+<div style="padding-left:16px">
+
+</div>
+	
+	
+
+
+</body>
+</html>
