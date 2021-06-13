@@ -16,15 +16,15 @@ No.    ATTRIBUTES       ATTRIBUTE TYPE
 
 3.      K                Numeric 
 
-4.   Temperature         Numeric 
+4.      Temperature      Numeric 
 
-5.   Humidity            Numeric 
+5.      Humidity         Numeric 
 
-6.   Soil pH             Numeric 
+6.      Soil pH          Numeric 
 
-7.   Rainfall            Numeric 
+7.      Rainfall         Numeric 
 
-8.    Crop               String 
+8.      Crop             String 
 
 
 ![Screenshot (1646)](https://user-images.githubusercontent.com/56502606/121810558-0616c300-cc7f-11eb-81e6-05a70f81fb9a.png)
@@ -71,8 +71,9 @@ RMSE=sqrt(sigma(predicted-actual)/total test observations
  The accuracy rates for the different models are shown in the following table for 75% training and 25% testing 
  
  Observations for Target: 2200 
-
 Training Observations for Target: 1650 
+Testing Observations for Target: 550
+
 ![Screenshot (1656)](https://user-images.githubusercontent.com/56502606/121810440-8be63e80-cc7e-11eb-8596-6174982cb25d.png)
 ![Screenshot (1647)](https://user-images.githubusercontent.com/56502606/121810450-999bc400-cc7e-11eb-8d38-855116458019.png)
 ![Screenshot (1648)](https://user-images.githubusercontent.com/56502606/121810472-a6b8b300-cc7e-11eb-89e2-9c1b1b37488e.png)
@@ -83,4 +84,4 @@ Training Observations for Target: 1650
 ![Screenshot (1654)](https://user-images.githubusercontent.com/56502606/121810539-e7b0c780-cc7e-11eb-864a-2c44cc3ac965.png)
 
 
-Testing Observations for Target: 550 
+ 
