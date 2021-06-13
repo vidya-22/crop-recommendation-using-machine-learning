@@ -8,7 +8,7 @@ The dataset used for the system is the “Crop Recommendation Dataset” from th
 
  Following table gives the details regarding the various attributes for the dataset: 
 
-No.    ATTRIBUTES       ATTRIBUTE TYPE 
+No.     ATTRIBUTES       ATTRIBUTE TYPE 
 
 1.      N                Numeric 
 
